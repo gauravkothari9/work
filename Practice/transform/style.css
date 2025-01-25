@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.inner{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    border: 2px solid black;
+}
+
+p{
+    font-size: 18px;
+    color: white;
+    padding: 20px;
+    text-align: justify;
+    transform: scale(0) rotate(180deg);
+    transition: 0.4s;
+}
+
+.inner:hover p{
+    transform: scale(1) rotate(0);
+}
