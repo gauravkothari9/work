@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divp{
+            display: flex;
+            width: 500px;
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        .divp div {
+            width: 40%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="handledivs()">Handle Divs</button>
+    <ul id="myul">
+        <li>hello1</li>
+        <li>hello2</li>
+        <li>hello3</li>
+        <li>hello4</li>
+        <li>hello5</li>
+        <li>hello6</li>
+        <li>hello7</li>
+        <li>hello8</li>
+        <li>hello9</li>
+        <li>hello10</li>
+    </ul>
+
+    <div class="divp" id="mydiv">
+        <div id="d1">
+            content of Dev 1
+        </div>
+        <div id="d2">
+            content of Dev 2
+        </div>
+    </div>
+    <script>
+        const ul = document.getElementById('myul')
+
+        console.log(ul.innerText);
+        console.log(ul.textContent);
+        console.log(ul.innerHTML);
+
+
+        const d1 = document.getElementById('d1');
+        const d2 = document.getElementById('d2');
+
+        function handledivs(){
+            let tmp = d2.innerText
+
+            d2.innerText = d1.innerText;
+            d1.innerText = tmp;           
+        }
+
+    </script>
+</body>
+</html>

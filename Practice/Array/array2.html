@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="password-input">
+    <button id="btn" onclick="handlepassword()">show</button>
+    <script>
+        const input = document.getElementById('password-input')
+        const btn = document.getElementById('btn')
+        function handlepassword(){
+            const buttontext = btn.innerText;
+
+            if(buttontext == 'show'){
+                input.type = 'text';
+                btn.innerText = 'Hide';
+            } else{
+                input.type = 'password';
+                btn.innerText = 'show';
+            }      
+        };
+    </script>
+</body>
+</html>
